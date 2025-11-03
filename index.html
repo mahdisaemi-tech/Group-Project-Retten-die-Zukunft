@@ -1,51 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mission Zukunft</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Operation Gaia</title>
   </head>
   <body>
-    <header>
-      <h1>
-        Die Zukunft ist in <strong><i>Gefahr</i></strong
-        >. Nur dein Wissen kann die Zeit stabilisieren
-      </h1>
-      <p>Beanworte die Fragen, um die Welt zu retten</p>
-    </header>
-    <main>
-      <section id=" start-screen">
-        <h2>Bist du bereit für deine Mission?</h2>
-        <p>
-          <big><strong>8 Missionen </strong> </big>warten auf dich. Jede
-          richtige Antwort bring dich näher zum Ziel.
-        </p>
-        <button id="start-btn">Mission starten</button>
-      </section>
+    <div id="start-screen">
+      <h1>Operation GAIA - Das Schicksal liegt in deiner Hand</h1>
+      <button id="begin-btn">Spiel starten</button>
+    </div>
 
-      <section id="quiz-screen" class="hidden">
-        <div id="status-row">
-          <span id="question-counter">Farge 1 von 8</span>
-        </div>
-        <div id="card">
-          <h3 id="qustion-tex">Hier steht die Frage</h3>
-          <div id="answer-buttons" class="btn-grid"></div>
-        </div>
+    <div id="story-screen" class="hidden">
+      <h2>Jahr 3064</h2>
+      <p>
+        <strong>Jahr 3064:</strong> Die Erde liegt im Orbit eines sterbenden
+        Sterns.
+      </p>
+      <p>
+        Nur die KI <strong>X-9</strong> bewahrt noch Fragmente der menschlichen
+        Geschichte. Doch eine kosmische Anomalie — genannt
+        <em>Der Strom</em> droht, alles Wissen zu löschen.
+      </p>
+      <p>Commander, unsere Schildgeneratoren sind fast leer.</p>
+      <p>
+        Nur wenn du die richtigen Antworten gibst, können wir den Schild wieder
+        aufladen!
+      </p>
+      <h3>Archivdaten:</h3>
+      <ul>
+        <li><strong>2089:</strong> KI X-9 stabilisiert das Klima.</li>
+        <li><strong>2102:</strong> Hauptstadt verlegt nach New-Earthy.</li>
+        <li><strong>2120:</strong> Umstellung auf Fusionsenergie.</li>
+        <li><strong>2150:</strong> Bau des Aegis-Schilds beginnt.</li>
+        <li><strong>2201:</strong> Mars-Terraforming aufgegeben.</li>
+        <li>
+          <strong>2245:</strong> Helios Corp kontrolliert Energieproduktion.
+        </li>
+        <li><strong>2277:</strong> Gründung des Galaktischen Rats.</li>
+        <li><strong>2300+:</strong> Gerüchte um die Schatten-KI Erebus.</li>
+      </ul>
 
-        <div class="controls">
-          <button id="next-btn" class="hidden">nächste Mission</button>
-        </div>
-      </section>
+      <p>
+        Jede korrekte Antwort lädt den Schutzschild. Jeder Fehler schwächt ihn.
+        Nur du kannst die Zukunft retten.
+      </p>
+      <button id="start-quiz-btn">Verstanden - Mission beginnen</button>
+    </div>
 
-      <section id="result-screen" class="hidden">
-        <h2 id="result-title">Ergebnis</h2>
-        <p id="result-text"></p>
-        <p id="result-message"></p>
-        <button id="restart-btn">Nochmal versuchen</button>
-      </section>
-    </main>
+    <div id="quiz-screen" class="hidden">
+      <h2 id="question-number">Mission 1</h2>
+      <p id="question-text">Frage erscheint hier</p>
 
-    <script src="app.js"></script>
+      <div id="answer-buttons" class="btn-container"></div>
+
+      <button id="next-btn" class="hidden">Nächste Mission</button>
+
+      <div id="shield-bar">
+        <div id="shield-fill"></div>
+      </div>
+      <p id="shield-status">Schildenergie: <span id="shield-value">0%</span></p>
+    </div>
+
+    <div id="result-screen" class="hidden">
+      <h2 id="result-title"></h2>
+      <p id="result-text"></p>
+      <button id="restart-btn">Neue Mission</button>
+    </div>
   </body>
 </html>
