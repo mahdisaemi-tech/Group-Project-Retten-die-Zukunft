@@ -3,7 +3,49 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Mission Zukunft</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body></body>
+  <body>
+    <header>
+      <h1>
+        Die Zukunft ist in <strong><i>Gefahr</i></strong
+        >. Nur dein Wissen kann die Zeit stabilisieren
+      </h1>
+      <p>Beanworte die Fragen, um die Welt zu retten</p>
+    </header>
+    <main>
+      <section id=" start-screen">
+        <h2>Bist du bereit für deine Mission?</h2>
+        <p>
+          <big><strong>8 Missionen </strong> </big>warten auf dich. Jede
+          richtige Antwort bring dich näher zum Ziel.
+        </p>
+        <button id="start-btn">Mission starten</button>
+      </section>
+
+      <section id="quiz-screen" class="hidden">
+        <div id="status-row">
+          <span id="question-counter">Farge 1 von 8</span>
+        </div>
+        <div id="card">
+          <h3 id="qustion-tex">Hier steht die Frage</h3>
+          <div id="answer-buttons" class="btn-grid"></div>
+        </div>
+
+        <div class="controls">
+          <button id="next-btn" class="hidden">nächste Mission</button>
+        </div>
+      </section>
+
+      <section id="result-screen" class="hidden">
+        <h2 id="result-title">Ergebnis</h2>
+        <p id="result-text"></p>
+        <p id="result-message"></p>
+        <button id="restart-btn">Nochmal versuchen</button>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
 </html>
